@@ -1,6 +1,6 @@
 {
   "name": "proper-name-case",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Properly case people's names",
   "main": "./lib/init.js",
   "scripts": {
@@ -9,7 +9,7 @@
     "lintapp": "eslint ./ --fix"
   },
   "author": "dgale@uw.edu",
-  "license": "UNLICENSED",
+  "license": "GPL-3.0",
   "dependencies": {
     "babel-plugin-transform-runtime": "^6.23.0",
     "babel-preset-latest": "^6.24.1",
