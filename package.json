@@ -1,6 +1,6 @@
 {
   "name": "proper-name-case",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Properly case people's names",
   "main": "./lib/init.js",
   "scripts": {
