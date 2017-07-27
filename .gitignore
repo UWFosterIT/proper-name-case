@@ -1,0 +1,16 @@
+# See http://help.github.com/ignore-files/ for more about ignoring files.
+
+# dependencies
+node_modules
+
+# configs
+development.yml
+database.json
+
+# misc
+.sass-cache
+*.log
+log.txt
+npm-debug.log.*
+.vscode
+cache
