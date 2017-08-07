@@ -1,23 +1,21 @@
 {
   "name": "proper-name-case",
-  "version": "0.2.3",
+  "version": "1.0.0",
   "description": "Properly case people's names",
-  "main": "./lib/init.js",
+  "main": "./dist/index.js",
   "scripts": {
+    "lintapp": "eslint ./ --fix",
     "mocha": "mocha --bail --reporter dot --compilers js:babel-register --timeout 0",
     "test": "npm run mocha ./test/**/spec-pnc.js",
-    "lintapp": "eslint ./ --fix"
+    "transpile": "babel src --out-dir dist -s"
   },
   "author": "dgale@uw.edu",
   "license": "GPL-3.0",
-  "dependencies": {
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-latest": "^6.24.1",
-    "babel-preset-stage-3": "^6.24.1",
-    "babel-register": "^6.24.1"
-  },
+  "dependencies": {},
   "devDependencies": {
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^7.2.3",
+    "babel-preset-env": "^1.6.0",
     "chai": "^4.0.2",
     "eslint": "^4.0.0",
     "mocha": "^3.4.2"
@@ -28,11 +26,14 @@
   },
   "babel": {
     "presets": [
-      "latest",
-      "stage-3"
-    ],
-    "plugins": [
-      "transform-runtime"
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
     ]
   },
   "homepage": "https://github.com/UWFosterIT/proper-name-case#readme"

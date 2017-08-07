@@ -1,5 +1,5 @@
 import chai           from 'chai';
-import properNameCase from '../lib/main';
+import properNameCase from '../dist/index';
 import testData       from './test-data';
 
 const expect = chai.expect;
