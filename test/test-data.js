@@ -53,6 +53,12 @@ module.exports = {
   }, {
     input:  "tester VON o'brien iii",
     output: "Tester von O'Brien III"
+  }, {
+    input:  'DEBADRITA DAS',
+    output: 'Debadrita Das'
+  }, {
+    input:  'DI ZHANG',
+    output: 'Di Zhang'
   }]
 };
 

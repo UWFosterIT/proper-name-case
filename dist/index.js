@@ -9,9 +9,11 @@ exports.default = {
     if (str !== null && typeof str !== 'undefined' && str !== '') {
       let chunks = [];
       let buffer = '';
+      let isFirstChunk = true;
       for (let x = 0; x < str.length; x++) {
         if (str[x].match(/[\s]+/) || str[x] == '-' || str[x] == '.' || str[x] == ',') {
-          chunks.push(this.processChunk(`${buffer}${str[x]}`));
+          chunks.push(this.processChunk(`${buffer}${str[x]}`, isFirstChunk));
+          isFirstChunk = false;
           buffer = '';
         } else {
           buffer += str[x];
@@ -19,7 +21,8 @@ exports.default = {
       }
 
       if (buffer != '') {
-        chunks.push(this.processChunk(buffer));
+        chunks.push(this.processChunk(buffer, isFirstChunk));
+        isFirstChunk = false;
       }
 
       let final = chunks.join('').trim();
@@ -28,9 +31,9 @@ exports.default = {
     return '';
   },
 
-  processChunk: function (str) {
+  processChunk: function (str, isFirstChunk) {
     // Surname prefixes
-    if (str.match(/^(van|von|der|la|d[aeio]|d[ao]s|dit)[\s,]*$/i)) {
+    if (str.match(/^(van|von|der|la|d[aeio]|d[ao]s|dit)[\s]+.*$/i) && isFirstChunk === false) {
       return str.toLowerCase();
     }
 
