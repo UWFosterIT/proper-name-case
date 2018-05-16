@@ -1,21 +1,17 @@
 {
   "name": "proper-name-case",
-  "version": "1.0.1",
-  "description": "Properly case people's names",
-  "main": "./dist/index.js",
+  "version": "1.1.0",
+  "description": "Properly case proper nouns",
+  "main": "./index.js",
   "scripts": {
     "lintapp": "eslint ./ --fix",
-    "mocha": "mocha --bail --reporter dot --compilers js:babel-register --timeout 0",
-    "test": "npm run mocha ./test/**/spec-pnc.js",
-    "transpile": "babel src --out-dir dist -s"
+    "mocha": "mocha --bail --reporter dot --timeout 0",
+    "test": "npm run mocha ./test/**/spec_pnc.js"
   },
   "author": "dgale@uw.edu",
   "license": "GPL-3.0",
   "dependencies": {},
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-eslint": "^8.2.1",
-    "babel-preset-env": "^1.6.1",
     "chai": "^4.1.2",
     "eslint": "^4.16.0",
     "mocha": "^5.0.0"
@@ -23,18 +19,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/UWFosterIT/proper-name-case.git"
-  },
-  "babel": {
-    "presets": [
-      [
-        "env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
   },
   "homepage": "https://github.com/UWFosterIT/proper-name-case#readme"
 }

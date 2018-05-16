@@ -1,6 +1,6 @@
-import chai           from 'chai';
-import properNameCase from '../dist/index';
-import testData       from './test-data';
+let chai           = require('chai');
+let properNameCase = require('../index');
+let testData       = require('./test_data');
 
 const expect = chai.expect;
 
@@ -12,5 +12,4 @@ describe('When converting to proper name case', function () {
       expect(converted).to.eql(name.output);
     }
   });
-
 });

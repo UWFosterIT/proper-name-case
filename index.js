@@ -1,10 +1,5 @@
-'use strict';
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 /* eslint-disable no-useless-escape */
-exports.default = {
+module.exports = {
   convert: function (str) {
     if (str !== null && typeof str !== 'undefined' && str !== '') {
       let chunks = [];
@@ -29,6 +24,7 @@ exports.default = {
       return final;
     }
     return '';
+
   },
 
   processChunk: function (str, isFirstChunk) {
@@ -61,4 +57,3 @@ exports.default = {
   }
 
 };
-//# sourceMappingURL=index.js.map

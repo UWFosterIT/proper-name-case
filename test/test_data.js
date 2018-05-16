@@ -61,5 +61,3 @@ module.exports = {
     output: 'Di Zhang'
   }]
 };
-
-
